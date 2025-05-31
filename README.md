@@ -56,7 +56,8 @@ torchrun --master_port 13348  eval.py exp.suffix=eval_dit_PickaPic exp.pipeline=
 torchrun --master_port 13349 eval.py exp.suffix=eval_sdxl_DrawBench_DPO exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper_dpo/model.pth exp.val_data_path=data/DrawBench
 torchrun --master_port 13350 eval.py exp.suffix=eval_dreamshaper_DrawBench_DPO exp.pipeline=DreamShaper exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper_dpo/model.pth exp.val_data_path=data/DrawBench
 torchrun --master_port 13351 eval.py exp.suffix=eval_dit_DrawBench_DPO exp.pipeline=DiT exp.pretrained_path=pretrained_models/dit_dpo/model.pth exp.val_data_path=data/DrawBench exp.cfg=5.0
-</details> ```
+```
+</details>
 
 
 ## 🚧 Todo
