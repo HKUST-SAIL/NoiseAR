@@ -1,7 +1,9 @@
 # NoiseAR: AutoRegressing Initial Noise Prior for Diffusion Models
 [Zeming Li](https://www.zemingli.com/)$^{\*}$ [Xiangyue Liu](https://xiangyueliu.github.io/)$^{{\*}}$, [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=zh-CN), [Ping Tan](https://pingtan.people.ust.hk/index.html), [Heung-Yeung Shum](https://scholar.google.com.hk/citations?user=9akH-n8AAAAJ&hl=en)
 
-<a href=""><img src="https://img.shields.io/badge/ArXiv-2505.23253-brightgreen"></a> 
+<div align=center>
+<img src="assets/NoiseAR_overall_arch_color.pdf" width="80%"/>
+</div>
 
 ## Getting Started 
 
