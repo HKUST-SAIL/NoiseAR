@@ -52,9 +52,9 @@ torchrun --master_port 13344 eval.py exp.suffix=eval_dreamshaper_GenEval exp.pip
 torchrun --master_port 13345 eval.py exp.suffix=eval_dreamshaper_PickaPic exp.pipeline=DreamShaper  exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper/model.pth exp.val_data_path=data/PickaPic exp.cfg=5.0
 
 # DiT on DrawBench, GenEval, PickaPic
-torchrun --master_port 13346  eval.py exp.suffix=eval_dit_DrawBench exp.pipeline=DiT exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/DrawBench 
-torchrun --master_port 13347  eval.py exp.suffix=eval_dit_GenEval exp.pipeline=DiT  exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/GenEval
-torchrun --master_port 13348  eval.py exp.suffix=eval_dit_PickaPic exp.pipeline=DiT  exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/PickaPic 
+torchrun --master_port 13346 eval.py exp.suffix=eval_dit_DrawBench exp.pipeline=DiT exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/DrawBench 
+torchrun --master_port 13347 eval.py exp.suffix=eval_dit_GenEval exp.pipeline=DiT  exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/GenEval
+torchrun --master_port 13348 eval.py exp.suffix=eval_dit_PickaPic exp.pipeline=DiT  exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/PickaPic 
 
 # DPO of SDXL, DreamShaper, DiT on DrawBench
 torchrun --master_port 13349 eval.py exp.suffix=eval_sdxl_DrawBench_DPO exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper_dpo/model.pth exp.val_data_path=data/DrawBench
