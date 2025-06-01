@@ -41,17 +41,17 @@ torchrun eval.py exp.suffix=eval_sdxl_DrawBench exp.pretrained_path=pretrained_m
 <summary>Click to expand for all of our evaluation commands</summary>
 
 ```bash
-# SDXL on GenEval, DrawBench, PickaPic
+# SDXL on DrawBench, GenEval, PickaPic
 torchrun --master_port 13340 eval.py exp.suffix=eval_sdxl_DrawBench exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper/model.pth exp.val_data_path=data/DrawBench
 torchrun --master_port 13341 eval.py exp.suffix=eval_sdxl_GenEval exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper/model.pth exp.val_data_path=data/GenEval
 torchrun --master_port 13342 eval.py exp.suffix=eval_sdxl_PickaPic exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper/model.pth exp.val_data_path=data/PickaPic
 
-# DreamShaper on GenEval, DrawBench, PickaPic
+# DreamShaper on DrawBench, GenEval, PickaPic
 torchrun --master_port 13343 eval.py exp.suffix=eval_dreamshaper_DrawBench exp.pipeline=DreamShaper exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper/model.pth exp.val_data_path=data/DrawBench exp.cfg=3.5
 torchrun --master_port 13344 eval.py exp.suffix=eval_dreamshaper_GenEval exp.pipeline=DreamShaper  exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper/model.pth exp.val_data_path=data/GenEval exp.cfg=5.0
 torchrun --master_port 13345 eval.py exp.suffix=eval_dreamshaper_PickaPic exp.pipeline=DreamShaper  exp.pretrained_path=pretrained_models/sdxl_and_dreamshaper/model.pth exp.val_data_path=data/PickaPic exp.cfg=5.0
 
-# DiT on GenEval, DrawBench, PickaPic
+# DiT on DrawBench, GenEval, PickaPic
 torchrun --master_port 13346  eval.py exp.suffix=eval_dit_DrawBench exp.pipeline=DiT exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/DrawBench 
 torchrun --master_port 13347  eval.py exp.suffix=eval_dit_GenEval exp.pipeline=DiT  exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/GenEval
 torchrun --master_port 13348  eval.py exp.suffix=eval_dit_PickaPic exp.pipeline=DiT  exp.pretrained_path=pretrained_models/dit/model.pth exp.val_data_path=data/PickaPic 

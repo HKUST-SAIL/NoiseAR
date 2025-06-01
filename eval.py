@@ -385,14 +385,11 @@ class Exp(BaseExp):
             origin_imgs_path = os.path.join(self.cfg.val_data_path, "origin_imgs_%s"%self.cfg.pipeline)
             os.makedirs(origin_imgs_path, exist_ok=True)
 
-            print('Start eval...')
+            print('Start inference imgs...')
             for _, batch in enumerate(self.val_dataloader):
-                gt_noise, prompts, prompt_embeds, prompt_idx, noise_idx = (_ for _ in batch)
-                gt_noise = gt_noise.squeeze(1).to(self.accelerator.device).to(torch.float32)
+                _, prompts, prompt_embeds, prompt_idx, noise_idx = (_ for _ in batch)
                 prompt_embeds = prompt_embeds.to(self.accelerator.device).to(torch.float32)
                 pred_noise = model(prompt_embeds)
-                recon_loss = F.mse_loss(pred_noise, gt_noise)
-                print(recon_loss.item())
 
                 pipe = self.pipe.to(torch.float16)
                 generator = get_generator(5555)  
