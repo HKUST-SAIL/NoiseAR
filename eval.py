@@ -73,7 +73,7 @@ class SFTDataset(Dataset):
 
         latent = self.latent[idx]
 
-        noise_num_per_prompt = int(len(self.latent) / len(self.prompts_list))   # 40
+        noise_num_per_prompt = int(len(self.latent) / len(self.prompts_list))  
         prompt_idx = int(idx // noise_num_per_prompt)
         noise_idx = int(idx % noise_num_per_prompt)
 
@@ -134,8 +134,7 @@ class NoiseARNet(torch.nn.Module):
                     nn.Linear(d_model, d_ff),
                     nn.GELU(),
                     nn.Dropout(dropout),
-                    nn.Linear(d_ff, d_model),
-                    # nn.GELU(),    
+                    nn.Linear(d_ff, d_model), 
                     nn.Dropout(dropout),
                 )
                 for _ in range(n_layers)
@@ -186,7 +185,7 @@ class NoiseARNet(torch.nn.Module):
         self._init_weights()
 
         if pretrained_path and ".pth" in pretrained_path:
-            state = torch.load(pretrained_path) # , map_location=self.device)
+            state = torch.load(pretrained_path) 
             missing_keys, unexpected_keys = self.load_state_dict(state, strict=True)
             print("Pretrained model loaded successfully!")
 
@@ -236,7 +235,7 @@ class NoiseARNet(torch.nn.Module):
     
     @staticmethod
     def sample_noise(mu, std):
-        eps = torch.randn_like(std)  # [64, 4, 128, 128]
+        eps = torch.randn_like(std)  
         sample = mu + eps * std
         return sample
 
