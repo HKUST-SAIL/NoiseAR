@@ -1,7 +1,7 @@
 # NoiseAR: AutoRegressing Initial Noise Prior for Diffusion Models
 [Zeming Li](https://www.zemingli.com/)$^{\*}$ [Xiangyue Liu](https://xiangyueliu.github.io/)$^{{\*}}$, [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=zh-CN), [Ping Tan](https://pingtan.people.ust.hk/index.html), [Heung-Yeung Shum](https://scholar.google.com.hk/citations?user=9akH-n8AAAAJ&hl=en)
 
-<a href=""><img src="https://img.shields.io/badge/ArXiv-2505.23253-brightgreen"></a> 
+<a href="https://arxiv.org/abs/2506.01337"><img src="https://img.shields.io/badge/ArXiv-2505.23253-brightgreen"></a> 
 
 <div align=center>
 <img src="assets/NoiseAR_overall_arch_color.png" width="92%"/>
@@ -72,5 +72,13 @@ torchrun --master_port 13351 eval.py exp.suffix=eval_dit_DrawBench_DPO exp.pipel
 If you find this project useful for your research, please cite: 
 
 ```
-
+@misc{li2025noisearautoregressinginitialnoise,
+      title={NoiseAR: AutoRegressing Initial Noise Prior for Diffusion Models}, 
+      author={Zeming Li and Xiangyue Liu and Xiangyu Zhang and Ping Tan and Heung-Yeung Shum},
+      year={2025},
+      eprint={2506.01337},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2506.01337}, 
+}
 ```
